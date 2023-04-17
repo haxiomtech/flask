@@ -1,0 +1,84 @@
+<!-- [ navigation menu ] start -->
+<nav class="pcoded-navbar">
+    <div class="navbar-wrapper">
+        <div class="navbar-brand header-logo">
+            <a href="/" class="b-brand">
+                <div class="b-bg">
+                    <i class="feather icon-trending-up"></i>
+                </div>
+                <span class="b-title">Haxiom</span>
+            </a>
+            <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+        </div>
+        <div class="navbar-content scroll-div">
+            <ul class="nav pcoded-inner-navbar">
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Análise Descritiva</label>
+                </li>
+                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" 
+                    class="nav-item {% if 'index' in segment %} active {% endif %}">
+                    <a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span
+                            class="pcoded-mtext">Dashboard</span></a>
+                </li>
+
+                <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds"
+                    class="nav-item pcoded-hasmenu ">
+                    <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-grid"></i></span><span
+                            class="pcoded-mtext">Por setor</span></a>
+                    <ul class="pcoded-submenu">
+                        <li class=""><a href="/bc_button.html" class="">Administração</a></li>
+                        <li class=""><a href="/bc_badges.html" class="">Contabilidade</a></li>
+                        <li class=""><a href="/bc_typography.html" class="">Controladoria</a></li>
+                        <li class=""><a href="/bc_breadcrumb-pagination.html" class="">Logística</a></li>
+                        <li class=""><a href="/bc_collapse.html" class="">Vendas</a></li>
+                        <li class=""><a href="/bc_tabs.html" class="">RH</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Análise Preditiva</label>
+                </li>
+                <!-- Input Manual -->
+                <li data-username="Input - Machine Learning"
+                    class="nav-item {% if 'ml-input' in segment %} active {% endif %}">
+                    <a href="/ml-input.html" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-sliders"></i></span>
+                            <span class="pcoded-mtext">Previsão Manual</span></a>
+                </li>
+                <!-- Input Massivo -->
+                <li data-username="Massive - Machine Learning"
+                    class="nav-item {% if 'ml-mass' in segment %} active {% endif %}">
+                    <a href="/ml-mass.html" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                            <span class="pcoded-mtext">Previsão Massiva</span></a>
+                </li>
+                <!-- Baseline -->
+                <li data-username="Baseline - Machine Learning"
+                    class="nav-item {% if 'baseline' in segment %} active {% endif %}">
+                    <a href="/baseline.html" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-bar-chart"></i></span>
+                            <span class="pcoded-mtext">Baseline</span></a>
+                </li>
+
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Mais...</label>
+                </li>
+                <li data-username="Disabled Menu" class="nav-item">
+                    <a href="{{ url_for('authentication_blueprint.logout') }}" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Logout</span>
+                    </a>
+                </li>
+                <li data-username="Support Page" class="nav-item ">
+                    <a target="_blank" href="https://google.com" class="nav-link">
+                        <span class="pcoded-micon">
+                            <i class="feather icon-headphones"></i>
+                        </span>
+                        <span class="pcoded-mtext">Suporte</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- [ navigation menu ] end -->

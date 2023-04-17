@@ -1,0 +1,93 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Input Manual {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <div class="main-body">
+                    <div class="page-wrapper">
+
+                        <!-- [ Main Content ] start -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-header py-2 card-header d-flex justify-content-center align-items-center">
+                                        <h5 class="m-0">Input Manual</h5>
+                                        <button id="btnPrever" class="btn btn-primary btn-sm ml-auto p-2" name="prever" type="submit">Prever</button>
+                                    </div>
+
+                                        <div class="card-body">
+
+                                            <!-- Data -->
+                                            <div class="form-group">
+
+                                                <label for="data">Escolha uma data:</label>
+                                                <input type="date" id="data" name="data" class="form-control">
+                                            </div>
+
+                                            <!-- Texto -->
+                                            <div class="form-group">
+                                                <label for="texto">Digite um texto:</label>
+                                                <input type="text" id="texto" name="texto" class="form-control">
+                                            </div>
+
+                                            <!-- Número -->
+                                            <div class="form-group">
+                                                <label for="texto">Digite um Número:</label>
+                                                <input type="number" id="number" name="number" class="form-control">
+                                            </div>
+
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Resultado</h5>
+                                    </div>
+                                    <div class="card-body-2">
+                                        <!-- Conteúdo da segunda coluna -->
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#btnPrever").click(function(){
+        // Captura os valores dos campos de entrada
+        var data = $("#data").val();
+        var texto = $("#texto").val();
+        var number = $("#number").val();
+
+        // Envia uma solicitação POST para a rota "/prever" com os dados capturados
+        $.post("/prever", {data: data, texto: texto, number: number}, function(data, status){
+            // Exibe a resposta da rota na segunda coluna da página
+            $(".card-body-2").html(data);
+        });
+    });
+});
+</script>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+
+{% block javascripts %}{% endblock javascripts %}
